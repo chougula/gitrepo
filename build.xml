@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<project name="fax" basedir="." default="build">
+  <property name="src.dir" value="src"/>
+  <property name="web.dir" value="war"/>
+  <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
+  <property name="lib.dir"  value="${web.dir}/WEB-INF/lib"/>
+  <property name="name" value="fax"/>
+
+<path id ="master-classpath">
+   <fileset dir="${lib.dir}">
+      <include name="*.jar"/>
+   </fileset>
+ <pathelement path="${build.dir}"/>
+</path>
+
+<target name="clean" description="clean the destination directory">
+        <delete>
+          <fileset dir="${build.dir}">
+            <include name="**/*.classes"/>
+          </fileset>
+        </delete>
+</target>

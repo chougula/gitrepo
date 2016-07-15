@@ -1,0 +1,17 @@
+#!/bin/bash
+SERVER="154.15.5.51"
+USERNAME="root"
+PASSWORD="@1"
+
+SOURCEFILES="/home/rgv/"
+BACKUPDIRCTORY="/home/rgv/Backup/"
+
+cd $BACKUPDIRCTORY
+
+ftp -n $SERVER <<EOF
+
+user $USERNAME $PASSWORD
+cd $SOURCEFILES
+prompt no
+mget *.tar
+EOF
