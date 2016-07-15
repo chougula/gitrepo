@@ -7,7 +7,7 @@ SOURCEFILES="/home/rgv/"
 BACKUPDIRCTORY="/home/rgv/Backup/"
 
 cd $BACKUPDIRCTORY
-
+##copying data to other server
 ftp -n $SERVER <<EOF
 
 user $USERNAME $PASSWORD
